@@ -1,3 +1,4 @@
+import '@/app/global.css'
 import Heading from "@/components/header"
 
 export const metadata = {
