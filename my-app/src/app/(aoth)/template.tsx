@@ -3,8 +3,10 @@
 "use client"
 
 import { usePathname } from 'next/navigation'
-
+import { useState } from 'react'
 import Link from 'next/link'
+
+
 type Aothprops = {
     children:React.ReactNode
 }
@@ -13,11 +15,16 @@ type Aothprops = {
 export default function Aothlayout({children}:Aothprops) {
     const Navlinks = [
         {name:"Signin", href:"/signin"},
-        {name:"Signup", href:"/signup"}
+        {name:"Signup", href:"/signup"},
+        {name:"Forgot-password", href:"/new-password"},
     ];
     const pathName = usePathname();
+    const [input, setInput] = useState("")
   return (
     <div>
+        <div className='bg-red-400 p-8'>
+            <input type='text' onChange={(e)=>{setInput(e.target.value)}}/>
+        </div>
         {Navlinks.map((link, index) => {
             const isActive = pathName.startsWith(link.href);
             return (
@@ -36,3 +43,4 @@ export default function Aothlayout({children}:Aothprops) {
 }
 
 //const pathname refers to the pathname/href in the url
+//with a template file, everything in the dom is refreshed and state isnt maintained, unlike layout file whihc only updates the changed UI
