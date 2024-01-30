@@ -3,7 +3,7 @@ import { ReactNode } from "react"
 
 type Productdetsprops = {
     children:React.ReactNode
-}
+};
 
 const layout = ({children}: Productdetsprops) => {
   return (
@@ -15,4 +15,4 @@ const layout = ({children}: Productdetsprops) => {
   )
 }
 
-export default layout
+export default layout;
