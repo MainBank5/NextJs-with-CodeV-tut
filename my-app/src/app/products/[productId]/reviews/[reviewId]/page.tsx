@@ -1,3 +1,5 @@
+"use client"
+
 import { notFound } from "next/navigation";
 
 type reviewprops = {
@@ -14,7 +16,12 @@ function getRandomInt (count: number) {
 
 
 const Review = ({params} :reviewprops) => {
-  getRandomInt(2)
+  const random = getRandomInt(2);
+
+  if(random ===  1) {
+    throw new Error("Error Loading Reviews")
+  }
+
   if (parseInt(params.reviewId) > 1000) {
     notFound()
   }
