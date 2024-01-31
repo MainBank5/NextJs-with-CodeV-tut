@@ -7,6 +7,7 @@ export default function F4() {
         <div>
           <h1> This is F4 page</h1>
           <Link href="/f1/f3" className="underline">F3</Link>
+          <Link href="/about" className="underline">About</Link>
         </div>
     )
   }
