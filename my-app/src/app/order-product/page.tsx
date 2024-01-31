@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation"
 export default function OrderProduct() {
     const router = useRouter()
     const handleClick  = () => {
-        console.log("placinf order");
+        console.log("placing order");
         {/*router.push("/contact");*/}
         router.back()
     }
