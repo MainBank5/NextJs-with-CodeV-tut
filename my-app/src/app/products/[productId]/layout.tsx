@@ -5,7 +5,7 @@ type Productdetsprops = {
     children:React.ReactNode
 };
 
-const layout = ({children}: Productdetsprops) => {
+const ProductIDLayout = ({children}: Productdetsprops) => {
   return (
     <div>
         
@@ -15,4 +15,4 @@ const layout = ({children}: Productdetsprops) => {
   )
 }
 
-export default layout;
+export default ProductIDLayout;
