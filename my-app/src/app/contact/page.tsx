@@ -2,7 +2,7 @@ import { Metadata } from "next"
 
 export const metadata : Metadata = {
     title: {
-        absolute:"contact"
+        absolute:"contact" //this will ignore the template metadata defined in the rootlayout
     }
 }
 

@@ -11,8 +11,9 @@ export default async function Layout({children, avatar, piece, login}:{
  {
   const isLogged = true;
   return isLogged ? (
-    <div className="flex gap-4">
-        {children}
+    <div className="flex">
+      <div className=" flex justify-center items-center">{children}</div>
+        
         {avatar}
         {piece}
         
